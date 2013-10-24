@@ -17,19 +17,17 @@ app.get('/',function(req,res) {
 
 	console.log(date.format(currentDate, "EEEE, MMMM dd, yyyy"));
 	console.log(date.format(endDate, "EEEE, MMMM dd, yyyy"));
+
 	var dayDiff = date(currentDate).difference(endDate, "day").value(),
 		i,
 		c=0;
 
 	for(i=0; i < dayDiff; i++) {
-		if(!date.isWeekend(currentDate)) {
+		if(!date.isWeekend(currentDate))
 			c++;
-		}
 
 		currentDate = date.add(currentDate,'day',1);
-		//console.log(date.format(currentDate, "EEEE, MMMM dd, yyyy"));
 	}
-	console.log(c);
 
 	res.render('index',{daysLeft: c,currentDate:date.format(currentDate, "EEEE, MMMM dd, yyyy")});
 });

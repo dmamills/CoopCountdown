@@ -1,0 +1,14 @@
+{
+	"name": "coopcountdown",
+	"description": "display days left until coop is over",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express": "*",
+		"jade": "*",
+		"date-extended":"*"
+	},
+	"engines": {
+		"node": "0.8.x"
+	}
+}

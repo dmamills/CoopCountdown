@@ -1,0 +1,19 @@
+!!!
+html
+	head
+		title Is Co-op over?
+		link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css')
+	body
+		.container
+			.row.text-center
+				h1.jumbo Is Co-op over yet?
+				h1=currentDate
+				if daysLeft>0
+					h1 No...
+					h1 #{daysLeft} days remaining.
+				else
+					h1 YES!
+		style.
+			.jumbo {
+				font-size:72px;
+			}

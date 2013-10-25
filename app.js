@@ -28,8 +28,8 @@ app.get('/',function(req,res) {
 
 		currentDate = date.add(currentDate,'day',1);
 	}
-
-	res.render('index',{daysLeft: c,currentDate:date.format(currentDate, "EEEE, MMMM dd, yyyy")});
+	var currentDateStr = date.format(new Date(), "EEEE, MMMM dd, yyyy");
+	res.render('index',{daysLeft: c,currentDate:currentDateStr});
 });
 
 app.listen(3000);
